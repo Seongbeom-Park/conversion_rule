@@ -2,7 +2,7 @@
   "version": "0.0.5",
   "rules": [
     {
-      "name": "add",
+      "name": "sub",
       "match": {
         "type": "anyNumber",
         "id": "num"
@@ -27,13 +27,13 @@
             }
           }
         ],
-        "config": "add_op"
+        "config": "sub_op"
       }
     }
   ],
   "configs": [
     {
-      "name": "add_op",
+      "name": "sub_op",
       "priority": 4,
       "format": "operand0l operator operand1Nl"
     }
