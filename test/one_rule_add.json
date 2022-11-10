@@ -1,0 +1,41 @@
+{
+  "version": "0.0.5",
+  "rules": [
+    {
+      "name": "add",
+      "match": {
+        "type": "anyNumber",
+        "id": "num"
+      },
+      "convert": {
+        "type": "operator",
+        "value": "-",
+        "children": [
+          {
+            "type": "number",
+            "fn": {
+              "name": "addIdId",
+              "args": ["num", "randomInt"]
+            }
+          },
+          {
+            "type": "number",
+            "id": "random",
+            "fn": {
+              "name": "randomInt",
+              "args": ["3", "7"]
+            }
+          }
+        ],
+        "config": "add_op"
+      }
+    }
+  ],
+  "configs": [
+    {
+      "name": "add_op",
+      "priority": 4,
+      "format": "operand0l operator operand1Nl"
+    }
+  ]
+}
